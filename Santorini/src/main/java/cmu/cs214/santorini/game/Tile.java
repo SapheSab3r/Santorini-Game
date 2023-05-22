@@ -39,6 +39,21 @@ public class Tile {
         return this.isChoosen;
     }
 
+    public boolean isValidLevel(int level) {
+        if (this.isComplete()) {
+            return false;
+        }
+        int currLevel = this.getTowerLevel();
+        if (currLevel > level + 1) {
+            return false;
+        }
+        return true;
+    }
+
+    public Tile copyTile() {
+        return new Tile(this.getTowerLevel());
+    }
+
     @Override
     public String toString() {
         return "Tile{" + "towerLevel=" + towerLevel + "}";

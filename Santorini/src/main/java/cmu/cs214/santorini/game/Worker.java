@@ -15,7 +15,7 @@ public class Worker {
         this.position = pos;
     }
 
-    public Position gePosition() {
+    public Position getPosition() {
         return this.position;
     }
 }
